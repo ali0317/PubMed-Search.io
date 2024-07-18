@@ -5,7 +5,7 @@ function generateSearchString() {
    
     // AJAX POST request to Flask backend
     $.ajax({
-        url: 'https://aliamir0317.pythonanywhere.com/generate_search',
+        url: 'https://aliamir0317.pythonanywhere.com:8080/generate_search',
         type: 'POST',
         contentType: 'application/json',
         data: JSON.stringify({ 'user_terms': termsArray }),
