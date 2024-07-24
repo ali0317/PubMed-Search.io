@@ -2,8 +2,10 @@
 body {
 font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 background:url('background.png');
-background-size:100vw 100vh;
-background-repeat: no-repeat;
+background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
 /* background: rgb(250,251,251);
 background: linear-gradient(180deg, rgba(250,251,251,1) 33%, rgba(218,218,218,1) 100%); */
 
@@ -130,3 +132,26 @@ background: linear-gradient(180deg, rgba(250,251,251,1) 33%, rgba(218,218,218,1)
         transform: rotate(360deg);
     }
 }
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer {
+    background-color: transparent;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
