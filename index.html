@@ -70,7 +70,7 @@
                 let terms = $('#terms').val();
                 $('#loader').show();
                 $.ajax({
-                    url: 'https://aliamir0317.pythonanywhere.com/get_search_string',
+                    url: 'https://integral-coleen-silversoftsolutions-b8481712.koyeb.app/get_search_string',
                     type: 'POST',
                     contentType: 'application/json',
                     data: JSON.stringify({ terms: terms }),
@@ -129,7 +129,7 @@
             $('#submit-selected-ids').on('click', function() {
                 $('#loader').show();
                 $.ajax({
-                    url: 'https://aliamir0317.pythonanywhere.com/get_entry_terms',
+                    url: 'https://integral-coleen-silversoftsolutions-b8481712.koyeb.app/get_entry_terms',
                     type: 'POST',
                     contentType: 'application/json',
                     data: JSON.stringify({ mesh_ids: selectedIds }),
