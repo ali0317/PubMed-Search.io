@@ -84,8 +84,13 @@
                                     let groupDiv = `<div class="mesh-group" data-group-index="${index}">
                                         <h6>${group.term}</h6>
                                         <ul class="list-group">`;
-                                    group.ids.forEach(id => {
-                                        groupDiv += `<li class="list-group-item" data-id="${id}">${id}</li>`;
+                                   let count =0;         
+                                   let termList= group.termList.split("OR");
+                                    group.ids.mesh_ID.forEach(id => {
+                                        let originalTerm = termList[count].trim().replaceAll('"','');
+                                        let finalTerm = originalTerm.replaceAll("[MeSH Terms]","");
+                                        groupDiv += `<li class="list-group-item" data-id="${id}">${finalTerm}</li>`;
+                                        count++;
                                     });
                                     groupDiv += `</ul></div>`;
                                     $('#mesh-groups').append(groupDiv);
