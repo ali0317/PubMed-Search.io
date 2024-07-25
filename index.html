@@ -6,7 +6,7 @@
     <title>MeSH Term Search String Generator</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-
+    <link rel="icon" type="image/x-icon" href="Tirofiban glass.png">
 </head>
 <body >
     <!-- <div style="position: absolute;top: 10px;left: 50px;"><img src="glass.png" alt=""></div> -->
@@ -40,7 +40,7 @@
 
     <!-- Modal -->
     <div class="modal fade" id="meshModal" tabindex="-1" role="dialog" aria-labelledby="meshModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
+        <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="meshModalLabel">Select MeSH ID</h5>
@@ -71,7 +71,7 @@
                 let terms = $('#terms').val();
                 $('#loader').show();
                 $.ajax({
-                    url: 'https://integral-coleen-silversoftsolutions-b8481712.koyeb.app/get_search_string',
+                    url: 'http://127.0.0.1:5000/get_search_string',
                     type: 'POST',
                     contentType: 'application/json',
                     data: JSON.stringify({ terms: terms }),
@@ -85,11 +85,11 @@
                                         <h6>${group.term}</h6>
                                         <ul class="list-group">`;
                                    let count =0;         
-                                   let termList= group.termList.split("OR");
-                                    group.ids.mesh_ID.forEach(id => {
-                                        let originalTerm = termList[count].trim().replaceAll('"','');
-                                        let finalTerm = originalTerm.replaceAll("[MeSH Terms]","");
-                                        groupDiv += `<li class="list-group-item" data-id="${id}">${finalTerm}</li>`;
+                                   let termList= group.termList;
+                                    group.ids.forEach(id => {
+                                        let originalTerm = termList[count];
+                                        // let finalTerm = originalTerm.replaceAll("[MeSH Terms]","");
+                                        groupDiv += `<li class="list-group-item" data-id="${id}">${originalTerm}</li>`;
                                         count++;
                                     });
                                     groupDiv += `</ul></div>`;
@@ -114,6 +114,7 @@
                     }
                 });
             });
+
 
             $(document).on('click', '.mesh-group .list-group-item', function() {
                 let groupIndex = $(this).closest('.mesh-group').data('group-index');
