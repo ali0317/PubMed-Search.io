@@ -144,8 +144,8 @@ body {
 
 .footer {
     background-color: transparent;
-    position: absolute;
-    bottom: 0;
+    /* position: absolute;
+    bottom: 0; */
     width: 100%;
     padding: 10px 0;
 }
