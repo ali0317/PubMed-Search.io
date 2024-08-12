@@ -9,7 +9,23 @@
 
 <url>
   <loc>https://www.pubmedsearchgen.online/</loc>
-  <lastmod>2024-08-08T07:07:54+00:00</lastmod>
+  <lastmod>2024-08-12T09:54:52+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://www.pubmedsearchgen.online/index.html</loc>
+  <lastmod>2024-08-12T09:54:52+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.pubmedsearchgen.online/how-to-use.html</loc>
+  <lastmod>2024-08-12T09:54:52+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.pubmedsearchgen.online/privacy-policy.html</loc>
+  <lastmod>2024-08-12T09:54:52+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 
 
